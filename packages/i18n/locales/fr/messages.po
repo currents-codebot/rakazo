@@ -121,6 +121,11 @@ msgstr "{0} est en cours d’exécution"
 msgid "{0} KB"
 msgstr "{0} Ko"
 
+#. placeholder {0}: usd(creditsUsd)
+#: apps/web/src/components/PlanUsage.tsx
+msgid "{0} left"
+msgstr ""
+
 #. placeholder {0}: parts.amount
 #: apps/web/src/components/ArtifactFileCard.tsx
 msgid "{0} MB"
@@ -141,6 +146,11 @@ msgstr "{0} To"
 msgid "{0}, paused until you turn it on"
 msgstr "{0}, en pause jusqu'à ce que vous l'activiez"
 
+#. placeholder {0}: Math.round(used)
+#: apps/web/src/components/PlanUsage.tsx
+msgid "{0}% used"
+msgstr ""
+
 #: apps/web/src/lib/billing.ts
 msgid "{amount} / {period}"
 msgstr "{amount} / {period}"
@@ -160,6 +170,10 @@ msgstr "{amount} par semaine"
 #: apps/mobile/lib/spending-limit.ts
 msgid "{amount} in total"
 msgstr "{amount} au total"
+
+#: apps/mobile/app/(settings)/account.tsx
+msgid "{amount} left"
+msgstr ""
 
 #: apps/mobile/lib/spending-limit.ts
 msgid "{amount} spent"
@@ -672,6 +686,10 @@ msgstr "{title}, enregistré sous {savedAs}"
 #: apps/web/src/pages/plugins/connector-detail.tsx
 msgid "{toolCount, plural, one {# tool} other {# tools}}"
 msgstr "{toolCount, plural, one {# outil} other {# outils}}"
+
+#: apps/mobile/app/(settings)/account.tsx
+msgid "{used}% used"
+msgstr ""
 
 #: apps/mobile/components/vault-item-editor.tsx
 msgid "{variable} is reserved. Choose another name."
@@ -2559,10 +2577,10 @@ msgstr "Terminé"
 #: apps/mobile/app/bot-settings.tsx
 #: apps/mobile/components/computer-mode-picker.tsx
 #: apps/mobile/components/ComputerCard.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/pages/settings-nav.ts
 #: apps/web/src/pages/shell/bot-panel.tsx
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
-#: apps/web/src/pages/shell/message-view.tsx
 msgid "Computer"
 msgstr "Ordinateur"
 
@@ -3093,6 +3111,7 @@ msgstr "Impossible de se connecter à l'écran de l'ordinateur"
 #: apps/mobile/app/sign-in.tsx
 #: apps/mobile/app/thread.tsx
 #: apps/mobile/components/account-deletion.tsx
+#: apps/mobile/components/ComputerCard.tsx
 #: apps/mobile/components/confirm-identity.tsx
 #: apps/mobile/lib/api-auth.ts
 #: apps/mobile/lib/identity-confirmation.ts
@@ -3101,6 +3120,7 @@ msgstr "Impossible de se connecter à l'écran de l'ordinateur"
 #: apps/mobile/lib/user-error.ts
 #: apps/web/src/components/AccountAccess.tsx
 #: apps/web/src/components/AccountDataSettings.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/components/ConfirmIdentityDialog.tsx
 #: apps/web/src/components/PasskeyOffer.tsx
 #: apps/web/src/components/PasskeySettings.tsx
@@ -4112,9 +4132,11 @@ msgstr "Identifiants : {names}"
 msgid "Credit amount"
 msgstr "Montant du crédit"
 
+#: apps/mobile/app/(settings)/account.tsx
 #: apps/mobile/app/(settings)/billing.tsx
 #: apps/mobile/app/paywall.tsx
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/components/PlanUsage.tsx
 msgid "Credits"
 msgstr "Crédits"
 
@@ -4370,6 +4392,8 @@ msgid "Delete memories too"
 msgstr "Supprimer les mémoires également"
 
 #: apps/mobile/app/(settings)/organization.tsx
+#: apps/mobile/app/paywall.tsx
+#: apps/web/src/components/AccountMenu.tsx
 #: apps/web/src/pages/OrganizationSettingsPanel.tsx
 msgid "Delete organization"
 msgstr "Supprimer l’organisation"
@@ -4417,6 +4441,10 @@ msgstr "supprimé"
 #: apps/mobile/components/pages/page-card.tsx
 msgid "Deleted"
 msgstr "Supprimée"
+
+#: apps/web/src/pages/shell/transcript-member-name.ts
+msgid "Deleted bot"
+msgstr ""
 
 #: apps/web/src/components/PasskeySettings.tsx
 #: apps/web/src/pages/Artifacts.tsx
@@ -4645,12 +4673,12 @@ msgstr "Vous n'avez pas de compte ?"
 #: apps/mobile/lib/activity.ts
 #: apps/mobile/lib/board.ts
 #: apps/web/src/components/AccountDataSettings.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/components/ToolActivityDisclosure.tsx
 #: apps/web/src/lib/ticket-status.ts
 #: apps/web/src/pages/ActivityList.tsx
 #: apps/web/src/pages/shell/avatar-studio-popover.tsx
 #: apps/web/src/pages/shell/import-setup-card.tsx
-#: apps/web/src/pages/shell/message-view.tsx
 msgid "Done"
 msgstr "Terminé"
 
@@ -5386,6 +5414,10 @@ msgstr "Paramètres du groupe"
 msgid "Group updates"
 msgstr "Mises à jour du groupe"
 
+#: apps/web/src/pages/shell/dialogs.tsx
+msgid "Groups left with fewer than two bots are deleted too, including their messages, files, and pages."
+msgstr ""
+
 #: apps/mobile/components/CallCard.tsx
 #: apps/web/src/components/call/CallCard.tsx
 msgid "Hang up"
@@ -5581,6 +5613,8 @@ msgid "https://example.com/openapi.json"
 msgstr "https://example.com/openapi.json"
 
 #: apps/mobile/app/computer.tsx
+#: apps/mobile/components/ComputerCard.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/pages/shell/computer-release-actions.tsx
 msgid "I’m done"
 msgstr "J'ai terminé"
@@ -6496,10 +6530,12 @@ msgstr "lundi"
 msgid "month"
 msgstr "mois"
 
+#: apps/mobile/app/(settings)/account.tsx
 #: apps/mobile/app/(settings)/spending-limit.tsx
 #: apps/mobile/app/paywall.tsx
 #: apps/mobile/lib/cron.ts
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/components/PlanUsage.tsx
 #: apps/web/src/components/SpendingLimitSettings.tsx
 #: apps/web/src/lib/cron.ts
 msgid "Monthly"
@@ -6673,9 +6709,9 @@ msgid "Needs takeover"
 msgstr "Nécessite une intervention"
 
 #: apps/mobile/components/ComputerCard.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/lib/roster-status.ts
 #: apps/web/src/pages/shell/computer-overlay.tsx
-#: apps/web/src/pages/shell/message-view.tsx
 msgid "Needs you"
 msgstr "A besoin de vous"
 
@@ -7227,12 +7263,12 @@ msgstr "Vous uniquement"
 #: apps/mobile/app/pages.tsx
 #: apps/mobile/components/ImportSetupCard.tsx
 #: apps/web/src/components/bot-templates/bot-templates-dialog.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/components/markdown-link-prompt.tsx
 #: apps/web/src/components/pages/PagesList.tsx
 #: apps/web/src/pages/PaymentWalletSettingsPanel.tsx
 #: apps/web/src/pages/shell/computer-panel.tsx
 #: apps/web/src/pages/shell/import-setup-card.tsx
-#: apps/web/src/pages/shell/message-view.tsx
 msgid "Open"
 msgstr "Ouvrir"
 
@@ -8365,6 +8401,11 @@ msgstr "Réinitialisation"
 msgid "Resets {date}."
 msgstr "Réinitialisation le {date}."
 
+#: apps/mobile/app/(settings)/account.tsx
+#: apps/web/src/components/PlanUsage.tsx
+msgid "Resets in {reset}"
+msgstr ""
+
 #: apps/web/src/components/ComputerMaintenanceActions.tsx
 msgid "Resetting…"
 msgstr "Réinitialisation en cours…"
@@ -8987,6 +9028,11 @@ msgstr "Nom du serveur"
 msgid "Server URL"
 msgstr "URL du serveur"
 
+#: apps/mobile/app/(settings)/account.tsx
+#: apps/web/src/components/PlanUsage.tsx
+msgid "Session"
+msgstr ""
+
 #: apps/web/src/components/SpendingLimitSettings.tsx
 msgid "Set"
 msgstr "Définir"
@@ -9309,6 +9355,8 @@ msgstr "Les compétences rejoignent la bibliothèque partagée par tous vos bots
 
 #: apps/mobile/app/computer.tsx
 #: apps/mobile/app/new-group.tsx
+#: apps/mobile/components/ComputerCard.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/pages/shell/computer-release-actions.tsx
 msgid "Skip"
 msgstr "Passer"
@@ -9318,7 +9366,7 @@ msgid "Skip or deploy key"
 msgstr "Passer ou clé de déploiement"
 
 #: apps/mobile/components/ComputerCard.tsx
-#: apps/web/src/pages/shell/message-view.tsx
+#: apps/web/src/components/ComputerCard.tsx
 msgid "Skipped"
 msgstr "Ignoré"
 
@@ -9736,6 +9784,7 @@ msgid "Table"
 msgstr "Tableau"
 
 #: apps/mobile/app/computer.tsx
+#: apps/web/src/components/ComputerCard.tsx
 #: apps/web/src/pages/shell/computer-overlay.tsx
 msgid "Take control"
 msgstr "Prendre le contrôle"
@@ -9875,6 +9924,14 @@ msgstr "L'ordinateur sur lequel travaillent vos bots."
 #: apps/web/src/lib/model-connection-preflight.ts
 msgid "The connection timed out."
 msgstr "La connexion a expiré."
+
+#: apps/web/src/pages/shell/dialogs.tsx
+msgid "The group {names} will be deleted too, including its messages, files, and pages."
+msgstr ""
+
+#: apps/web/src/pages/shell/dialogs.tsx
+msgid "The groups {names} will be deleted too, including their messages, files, and pages."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: packages/i18n/src/run-error.ts
@@ -10654,6 +10711,7 @@ msgid "URL"
 msgstr "URL"
 
 #: apps/mobile/app/(settings)/account.tsx
+#: apps/web/src/components/SidebarFooter.tsx
 #: apps/web/src/pages/settings-nav.ts
 msgid "Usage"
 msgstr "Utilisation"
@@ -10858,6 +10916,10 @@ msgstr "Tout voir"
 msgid "View source"
 msgstr "Voir la source"
 
+#: apps/web/src/components/SidebarFooter.tsx
+msgid "View usage"
+msgstr ""
+
 #: apps/mobile/app/(settings)/_layout.tsx
 #: apps/mobile/app/(settings)/account.tsx
 #: apps/mobile/app/(settings)/ai-data-sharing.tsx
@@ -10951,7 +11013,9 @@ msgstr "Jours ouvrés"
 msgid "Weekends"
 msgstr "Week-ends"
 
+#: apps/mobile/app/(settings)/account.tsx
 #: apps/mobile/app/(settings)/spending-limit.tsx
+#: apps/web/src/components/PlanUsage.tsx
 #: apps/web/src/components/SpendingLimitSettings.tsx
 msgid "Weekly"
 msgstr "Hebdomadaire"
